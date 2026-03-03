@@ -1,9 +1,28 @@
 package POO;
 
-public class msnmessenger {
+//praticando herança
+
+public class msnmessenger extends mensageminstantanea { // <- extends mensageminstantanea vai ser herança do
+                                                        // mensageminstantanea
     public static void main(String[] args) {
 
     }
+
+}
+
+class ComputadorPedrinho extends mensageminstantanea {
+    public static void main(String[] args) {
+        msnmessenger MsnMessenger = new msnmessenger();
+
+        // MsnMessenger.conectarInternet();
+        MsnMessenger.enviarMensagem();
+        MsnMessenger.receberMensagem();
+        // MsnMessenger.salvarMensagem();
+        // MsnMessenger.salvarHistorico();
+    }
+}
+
+class mensageminstantanea { // vai fazer todos os metodos de validação
 
     public void enviarMensagem() {
         validarconexao();
@@ -40,16 +59,3 @@ public class msnmessenger {
 
     }
 }
-
-     class ComputadorPedrinho {
-        public static void main(String[] args) {
-            msnmessenger MsnMessenger = new msnmessenger();
-
-            // MsnMessenger.conectarInternet();
-            MsnMessenger.enviarMensagem();
-            MsnMessenger.receberMensagem();
-            // MsnMessenger.salvarMensagem();
-            // MsnMessenger.salvarHistorico();
-        }
-    }
-
