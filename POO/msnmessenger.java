@@ -2,15 +2,24 @@ package POO;
 
 //praticando herança
 
+// praticando abstract
+
+// msnmessenger é classe filha do mensageminstantanea
 public class msnmessenger extends mensageminstantanea { // <- extends mensageminstantanea vai ser herança do
                                                         // mensageminstantanea
-    public static void main(String[] args) {
-
+   
+         public void enviarMensagem(){   //aqui se implementa o metodo da classe abstrata com a mensagem
+            System.out.println("Mensagem enviada do msn");
+         }
+         
+         public void receberMensagem() {
+            System.out.println("Mensagem recebida do msn");
+         }
     }
 
-}
 
-class ComputadorPedrinho extends mensageminstantanea {
+
+class ComputadorPedrinho {
     public static void main(String[] args) {
         msnmessenger MsnMessenger = new msnmessenger();
 
@@ -22,40 +31,39 @@ class ComputadorPedrinho extends mensageminstantanea {
     }
 }
 
-class mensageminstantanea { // vai fazer todos os metodos de validação
+ abstract class  mensageminstantanea { // vai fazer todos os metodos de validação
 
-    public void enviarMensagem() {
-        validarconexao();
-        System.out.println("ola");
+     public abstract void enviarMensagem(); //"A classe abstrata define QUAIS métodos devem existir para mandar mensagem, mas não implementa nada. Ela só obriga as classes filhas a terem esses métodos. Cada classe filha decide COMO funciona."
+        
 
-    }
+   
 
-    public void receberMensagem() {
-        System.out.println("Mensagem recebida");
+    public abstract void receberMensagem();
+        
 
-    }
+    
 
-    private void salvarMensagem() {
+    // private void salvarMensagem() {
 
-        System.out.println("Salvando Mensagem");
-    }
+    //     System.out.println("Salvando Mensagem");
+    // }
 
-    private void salvarHistorico() {
+    // private void salvarHistorico() {
 
-        System.out.println("Salvando Historico");
-    }
+    //     System.out.println("Salvando Historico");
+    // }
 
-    private boolean conectarInternet() {
+    // private boolean conectarInternet() {
 
-        return false;
-    }
+    //     return false;
+    // }
 
-    private void validarconexao() {
-        if (conectarInternet()) {
-            System.out.println("Conectado");
-        } else {
-            System.out.println("Sem internet");
-        }
+    // private void validarconexao() {
+    //     if (conectarInternet()) {
+    //         System.out.println("Conectado");
+    //     } else {
+    //         System.out.println("Sem internet");
+    //     }
 
-    }
+    // }
 }
