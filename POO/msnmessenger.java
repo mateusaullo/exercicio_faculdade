@@ -7,27 +7,41 @@ package POO;
 // msnmessenger é classe filha do mensageminstantanea
 public class msnmessenger extends mensageminstantanea { // <- extends mensageminstantanea vai ser herança do
                                                         // mensageminstantanea
-   
-         public void enviarMensagem(){   //aqui se implementa o metodo da classe abstrata com a mensagem
-            System.out.println("Mensagem enviada do msn");
-         }
-         
-         public void receberMensagem() {
-            System.out.println("Mensagem recebida do msn");
-         }
+
+    public void enviarMensagem() { //aqui se implementa o metodo da classe abstrata com a mensagem
+        System.out.println("Mensagem enviada do msn");
     }
+
+    public void receberMensagem() {
+        System.out.println("Mensagem recebida do msn");
+    }
+}
+   
+ class Whatsapp extends mensageminstantanea {
+
+    public void enviarMensagem() {
+        System.out.println("Mensagem enviada do whatsapp");
+    }
+
+    public void receberMensagem() {
+        System.out.println("Mensagem recebida do whatsapp");
+    }
+}
 
 
 
 class ComputadorPedrinho {
     public static void main(String[] args) {
         msnmessenger MsnMessenger = new msnmessenger();
+        Whatsapp whatsapp = new Whatsapp();
 
         // MsnMessenger.conectarInternet();
         MsnMessenger.enviarMensagem();
         MsnMessenger.receberMensagem();
         // MsnMessenger.salvarMensagem();
         // MsnMessenger.salvarHistorico();
+        whatsapp.enviarMensagem();
+        whatsapp.receberMensagem();
     }
 }
 
