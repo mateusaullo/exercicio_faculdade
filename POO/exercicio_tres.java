@@ -1,3 +1,4 @@
+package POO;
 public class exercicio_tres {
      public static void main(String[] args) {
          // Array: {50, 23, 18, 7, 99}

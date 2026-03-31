@@ -1,3 +1,4 @@
+package POO;
 public class TreinoBuscaLinear {
     public static void main(String[] args) {
 
