@@ -1,4 +1,4 @@
-package livro_algoritmo;
+package algoritmos_em_java_busca_ordenacao_analise;
 
 public class array {
     public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class array {
                     i = atual2;
                 }
                 
-                if (carro[i] == "volvo") {
+                if (carro[i] == "CAMARO") {
                     System.out.println(+atual + " " + carro[i] + " no array " + i + " " +precos[i]);
                 }
             }

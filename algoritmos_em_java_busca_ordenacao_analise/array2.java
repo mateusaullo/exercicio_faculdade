@@ -1,4 +1,4 @@
-package livro_algoritmo;
+package algoritmos_em_java_busca_ordenacao_analise;
 
 public class array2 {
     public static void main(String[] args) {
