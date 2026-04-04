@@ -14,8 +14,8 @@ public static void main(String[] args) {
     for (int atual = 0; atual <= 4; atual++) {
         if (produtos[atual].getPreco() < produtos[maisbarato].getPreco()) {
             maisbarato = atual;
-            produtos[atual].getNome();
         }
+        produtos[atual].getNome();
         produtos[atual].setPreco(1);
     }
     System.out.println(maisbarato);
