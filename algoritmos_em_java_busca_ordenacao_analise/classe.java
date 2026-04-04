@@ -16,6 +16,7 @@ public static void main(String[] args) {
             maisbarato = atual;
             produtos[atual].getNome();
         }
+        produtos[atual].setPreco(1);
     }
     System.out.println(maisbarato);
     System.out.println("O carro mais barato custa "+produtos[maisbarato].getPreco()+ " "+produtos[maisbarato].getNome());
@@ -36,7 +37,11 @@ public static void main(String[] args) {
      public double getPreco() {
          return preco;
      }
+
      public String getNome() {
          return nome;
+     }
+     public void setPreco(double preco) {
+         this.preco = preco;
      }
 }
